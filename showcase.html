@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KodNest Premium Build System — Showcase</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="layout">
+    <header class="layout__topbar">
+      <div class="topbar__left">Project name</div>
+      <div class="topbar__center">Step 1 / 4</div>
+      <div class="topbar__right">
+        <span class="badge badge--in-progress">In Progress</span>
+      </div>
+    </header>
+
+    <section class="layout__context-header">
+      <h1 class="context-header__headline">Context headline</h1>
+      <p class="context-header__subtext">One-line subtext that states the purpose of this step. No hype.</p>
+    </section>
+
+    <main class="layout__main">
+      <div class="layout__workspace">
+        <div class="card card--elevated">
+          <h2 class="h2">Primary workspace</h2>
+          <p class="text-block">Main product interaction lives here. Clean cards, predictable components, no crowding.</p>
+          <input type="text" class="input" placeholder="Input placeholder" style="max-width: 360px; margin-top: 16px;" />
+          <div style="margin-top: 24px; display: flex; gap: 16px;">
+            <button type="button" class="btn btn--primary">Primary action</button>
+            <button type="button" class="btn btn--secondary">Secondary</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="layout__panel">
+        <div class="panel__section">
+          <h3 class="panel__title">Step</h3>
+          <p class="panel__step-explanation">Short explanation of what to do in this step. Calm and clear.</p>
+        </div>
+        <div class="panel__section">
+          <h3 class="panel__title">Prompt</h3>
+          <div class="prompt-box">
+            <code>Copyable prompt or command goes here.</code>
+            <div class="prompt-box__actions">
+              <button type="button" class="btn btn--secondary">Copy</button>
+              <button type="button" class="btn btn--primary">Build in Lovable</button>
+              <button type="button" class="btn btn--secondary">It Worked</button>
+              <button type="button" class="btn btn--secondary">Error</button>
+              <button type="button" class="btn btn--secondary">Add Screenshot</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="layout__proof-footer">
+      <div class="proof-footer__checklist">
+        <div class="proof-footer__item">
+          <input type="checkbox" id="p1" class="proof-footer__checkbox" />
+          <label for="p1" class="proof-footer__label">UI Built</label>
+        </div>
+        <div class="proof-footer__item">
+          <input type="checkbox" id="p2" class="proof-footer__checkbox" />
+          <label for="p2" class="proof-footer__label">Logic Working</label>
+        </div>
+        <div class="proof-footer__item">
+          <input type="checkbox" id="p3" class="proof-footer__checkbox" />
+          <label for="p3" class="proof-footer__label">Test Passed</label>
+        </div>
+        <div class="proof-footer__item">
+          <input type="checkbox" id="p4" class="proof-footer__checkbox" />
+          <label for="p4" class="proof-footer__label">Deployed</label>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

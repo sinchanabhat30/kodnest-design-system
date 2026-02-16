@@ -1,0 +1,166 @@
+/**
+ * KodNest Premium Build System — Global Layout
+ * [Top Bar] → [Context Header] → [Workspace + Panel] → [Proof Footer]
+ */
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+}
+
+/* ─── Top Bar ─── */
+.layout__topbar {
+  flex-shrink: 0;
+  height: var(--topbar-height);
+  padding: 0 var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--border-width) solid var(--border-color);
+  background-color: var(--color-bg);
+}
+
+.topbar__left {
+  font-family: var(--font-sans);
+  font-size: var(--text-body-size);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.topbar__center {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption-size);
+  color: var(--color-text);
+  opacity: 0.85;
+}
+
+.topbar__right {
+  /* Status badge lives here */
+}
+
+/* ─── Context Header ─── */
+.layout__context-header {
+  flex-shrink: 0;
+  padding: var(--space-4) var(--space-4) var(--space-3);
+  border-bottom: var(--border-width) solid var(--border-color);
+}
+
+.context-header__headline {
+  font-family: var(--font-serif);
+  font-size: var(--text-heading-size);
+  line-height: var(--text-heading-line);
+  letter-spacing: var(--text-heading-spacing);
+  font-weight: 400;
+  margin: 0 0 var(--space-1) 0;
+}
+
+.context-header__subtext {
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line);
+  color: var(--color-text);
+  opacity: 0.85;
+  margin: 0;
+  max-width: var(--text-max-width);
+}
+
+/* ─── Main content: Workspace + Panel ─── */
+.layout__main {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+.layout__workspace {
+  flex: 0 0 var(--workspace-ratio);
+  padding: var(--space-4);
+  overflow: auto;
+}
+
+.layout__panel {
+  flex: 0 0 var(--panel-ratio);
+  padding: var(--space-4);
+  border-left: var(--border-width) solid var(--border-color);
+  overflow: auto;
+  background-color: var(--color-bg);
+}
+
+.panel__section {
+  margin-bottom: var(--space-4);
+}
+
+.panel__section:last-child {
+  margin-bottom: 0;
+}
+
+.panel__title {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption-size);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 var(--space-2) 0;
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
+.panel__step-explanation {
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line);
+  margin: 0 0 var(--space-2) 0;
+  max-width: var(--text-max-width);
+}
+
+/* Panel actions: Copy, Build in Lovable, It Worked, Error, Add Screenshot */
+.panel__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+/* ─── Proof Footer ─── */
+.layout__proof-footer {
+  flex-shrink: 0;
+  min-height: var(--footer-height);
+  padding: var(--space-2) var(--space-4);
+  border-top: var(--border-width) solid var(--border-color);
+  background-color: var(--color-bg);
+}
+
+.proof-footer__checklist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+  max-width: 720px;
+}
+
+.proof-footer__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.proof-footer__checkbox {
+  width: 20px;
+  height: 20px;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color var(--transition-duration) var(--transition-ease),
+    background-color var(--transition-duration) var(--transition-ease);
+}
+
+.proof-footer__checkbox:checked {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.proof-footer__label {
+  font-size: var(--text-caption-size);
+  line-height: 1.4;
+  color: var(--color-text);
+}
